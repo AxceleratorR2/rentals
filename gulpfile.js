@@ -30,9 +30,10 @@ function images(done) {
 }
 
 function dev() {
-  watch("src/scss/**/*.scss");
+  watch("src/scss/**/*.scss", css);
 }
 
 exports.css = css;
 exports.images = images;
-exports.dev = series(css, dev);
+exports.dev = dev;
+//exports.dev = series(css, dev);
